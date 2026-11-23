@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "star-trek-invasion-psx",
+  "name": "Star Trek - Invasion",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "star-trek-invasion-recomp",
+  "rom_identity": {
+    "crc32": [
+      "1de1eca0"
+    ],
+    "md5": [
+      "40af361b4eeea6383e021456205b1017"
+    ],
+    "sha1": [
+      "8b51620e59d7df116a2d0de2c7e6af6c4cf0346b"
+    ],
+    "disc_serials": [
+      "SLUS-00924"
+    ],
+    "sizes": [
+      679718592
+    ],
+    "filenames": [
+      "Star Trek - Invasion (USA).cue",
+      "Star Trek - Invasion (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "288276ea4aeae7e8693a9d2ead5a93f23f5ccc5230093e990222ba1fc8ca3873"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/star-trek-invasion-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "star-trek-invasion-*-windows-x64.zip",
+      "linux-x64": "star-trek-invasion-*-linux-x64.zip",
+      "macos-arm64": "star-trek-invasion-*-macos-arm64.zip",
+      "macos-x64": "star-trek-invasion-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "star_trek_invasion.exe",
+    "linux": "star_trek_invasion",
+    "macos": "star_trek_invasion"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/star-trek-invasion-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

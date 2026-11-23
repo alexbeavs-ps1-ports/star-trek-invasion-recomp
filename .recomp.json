@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Star Trek - Invasion",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "star-trek-invasion-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-00924"
+  }
+}

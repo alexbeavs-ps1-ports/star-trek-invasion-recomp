@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Star Trek - Invasion"
+id = "SLUS-00924"
+players = 1
+exe = "disc/SLUS_009.24"
+disc = "disc/Star Trek - Invasion (USA).cue"
+discs = ["disc/Star Trek - Invasion (USA).cue"]
+disc_serials = ["SLUS-00924"]
+load_address = "0x80010000"
+entry_pc = "0x8003C1C4"
+text_size = "0x0005C800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Star Trek - Invasion (USA).bin"
+cue_name = "Star Trek - Invasion (USA).cue"
+boot_exe = "SLUS_009.24"
+known_sizes = [679718592]
+known_md5 = [
+  "40af361b4eeea6383e021456205b1017",
+]
+known_sha1 = [
+  "8b51620e59d7df116a2d0de2c7e6af6c4cf0346b",
+]
+known_crc32 = [
+  "1de1eca0",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Star Trek - Invasion Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "288276ea4aeae7e8693a9d2ead5a93f23f5ccc5230093e990222ba1fc8ca3873"
